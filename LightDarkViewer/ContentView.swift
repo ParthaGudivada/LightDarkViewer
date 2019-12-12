@@ -55,8 +55,8 @@ struct ContentView: View {
 							.padding()
 					}
 					.frame(height: 50)
-					.background(Color.white)
-					
+					.background(RoundedRectangle(cornerRadius: 8)
+												.foregroundColor(.white))
 				}
 
 				VStack(spacing: 5) {
@@ -70,9 +70,8 @@ struct ContentView: View {
 							.font(.title)
 						}
 					.frame(height: 50)
-					.background(Color.black)
-					
-
+					.background(RoundedRectangle(cornerRadius: 8)
+					.foregroundColor(.black))
 				}
 				
 				Spacer()
