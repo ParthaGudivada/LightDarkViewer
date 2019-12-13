@@ -49,7 +49,6 @@ struct ContentView: View {
 					HStack {
 						Text(sampleData.isEmpty ? .sampleString : sampleData)
 							.foregroundColor(self.validColor(self.textColor))
-							.cornerRadius(10)
 							.frame(maxWidth: .infinity)
 							.font(.title)
 							.padding()
@@ -64,7 +63,6 @@ struct ContentView: View {
 
 					HStack {
 						Text(sampleData.isEmpty ? .sampleString : sampleData)
-							.cornerRadius(10)
 							.foregroundColor(self.validColor(self.textColor))
 							.frame(maxWidth: .infinity)
 							.font(.title)
