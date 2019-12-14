@@ -8,10 +8,19 @@
 
 import SwiftUI
 
-struct BackgroundText: View {
-	var text: String
-	var backColor: Color
-	var textColor: Color
+struct BackgroundText {
+	private var text: String
+	private var backColor: Color
+	private var textColor: Color
+	
+	init(_ text: String, backColor: Color = .blue, textColor: Color = .primary) {
+		self.text = text
+		self.backColor = backColor
+		self.textColor = textColor
+	}
+}
+
+extension BackgroundText: View {
 	
 	var body: some View {
 		Text(text)
@@ -21,12 +30,7 @@ struct BackgroundText: View {
 			.background(backColor)
 			.foregroundColor(textColor)
 	}
-	
-	init(_ text: String, backColor: Color = .blue, textColor: Color = .primary) {
-		self.text = text
-		self.backColor = backColor
-		self.textColor = textColor
-	}
+
 }
 
 

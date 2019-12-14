@@ -8,18 +8,21 @@
 
 import SwiftUI
 
-struct SubTitleText: View {
+struct SubTitleText {
 	
-	var subTitle = ""
+	private var subTitle = ""
+	
+	init(_ subTitle: String) {
+		self.subTitle = subTitle
+	}
+}
+
+extension SubTitleText: View {
 	
 	var body: some View {
 		Text(subTitle)
 			.font(.title)
-			//.foregroundColor(.gray)
-	}
-	
-	init(_ subTitle: String) {
-		self.subTitle = subTitle
+		//.foregroundColor(.gray)
 	}
 }
 

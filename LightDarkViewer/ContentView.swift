@@ -17,9 +17,8 @@ struct ContentView: View {
 	var body: some View {
 		
 		ZStack(alignment: .top, content: {
-			
 			Color.secondary
-			
+		
 			VStack(spacing: 20) {
 				
 				TitleText("Viewer")
@@ -91,7 +90,6 @@ extension ContentView {
 		} catch {
 			return .red
 		}
-		
 	}
 }
 
