@@ -8,17 +8,21 @@
 
 import SwiftUI
 
-struct TitleText: View {
+struct TitleText {
 	var title = ""
+	
+	init(_ title: String) {
+		self.title = title
+	}
+}
+
+extension TitleText: View {
 	
 	var body: some View {
 		Text(title)
 			.font(.largeTitle)
 	}
-	
-	init(_ title: String) {
-		self.title = title
-	}
+
 }
 
 struct TitleText_Previews: PreviewProvider {

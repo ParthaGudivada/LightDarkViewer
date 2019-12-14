@@ -8,23 +8,27 @@
 
 import SwiftUI
 
-struct CustomTextField: View {
-	private var placeHolder = ""
+struct CustomTextField {
+	private var placeHolder: String 
 	private var placeHolderTextColor: Color
 	
 	@Binding var textData: String
 	
-	init(placeHolder: String, textData: Binding<String>, placeHolderTextColor: Color = Color(.systemGray4)) {
+	init(placeHolder: String = "", textData: Binding<String>, placeHolderTextColor: Color = Color(.systemGray4)) {
 		self.placeHolder = placeHolder
 		self._textData = textData
 		self.placeHolderTextColor = placeHolderTextColor
 	}
+}
+
+extension CustomTextField: View {
 	
 	var body: some View {
 		
 		ZStack(alignment: .leading) {
 			if textData.isEmpty {
 				Text(placeHolder)
+					.italic()
 					.foregroundColor(placeHolderTextColor)
 					.opacity(0.5)
 			}
@@ -33,8 +37,8 @@ struct CustomTextField: View {
 		}
 		.padding(EdgeInsets(top: 10, leading: 15, bottom: 10, trailing: 10))
 		.overlay(RoundedRectangle(cornerRadius: 8)
-							.stroke(Color.green, lineWidth: 2)
-		 )
+		.stroke(Color.green, lineWidth: 2)
+		)
 	}
 }
 

@@ -8,8 +8,11 @@
 
 import SwiftUI
 
-struct WhiteBlackBackground: View {
+struct WhiteBlackBackground {
 	
+}
+
+extension WhiteBlackBackground: View {
 	var body: some View {
 		
 		GeometryReader { (gr)  in
