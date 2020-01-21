@@ -75,10 +75,10 @@ struct ContentView: View {
 				
 				Spacer()
 			}
-			.padding(.bottom, keyboardResponder.keyboardHeight)
+			.padding(EdgeInsets(top: 10, leading: 15, bottom: keyboardResponder.keyboardHeight, trailing: 10))
 			
 		})
-			.edgesIgnoringSafeArea(.all)
+		.edgesIgnoringSafeArea(.all)
 	}
 	
 }
