@@ -14,6 +14,8 @@ struct ContentView: View {
 	@State private var textColor = ""
 	@State private var backColor = ""
 	
+	@ObservedObject var keyboardResponder: KeyboardManager
+	
 	var body: some View {
 		
 		ZStack(alignment: .top, content: {
@@ -21,8 +23,7 @@ struct ContentView: View {
 		
 			VStack(spacing: 20) {
 				
-				TitleText("Viewer")
-					.padding()
+				TitleText("Viewer").padding()
 				SubTitleText("Light / Dark mode").foregroundColor(Color(.darkGray))
 				CustomTextField(placeHolder: .sampleString, textData: $sampleData)
 				
@@ -56,7 +57,7 @@ struct ContentView: View {
 					.background(RoundedRectangle(cornerRadius: 8)
 												.foregroundColor(.white))
 				}
-
+				
 				VStack(spacing: 5) {
 					Text("Dark Mode")
 
@@ -73,10 +74,10 @@ struct ContentView: View {
 				
 				Spacer()
 			}
-			.padding()
-		
+			.padding(EdgeInsets(top: 10, leading: 15, bottom: keyboardResponder.keyboardHeight, trailing: 10))
+			
 		})
-			.edgesIgnoringSafeArea(.all)
+		.edgesIgnoringSafeArea(.all)
 	}
 	
 }
@@ -96,7 +97,7 @@ extension ContentView {
 
 struct ContentView_Previews: PreviewProvider {
 	static var previews: some View {
-		ContentView()
+		ContentView(keyboardResponder: KeyboardManager())
 	}
 }
 

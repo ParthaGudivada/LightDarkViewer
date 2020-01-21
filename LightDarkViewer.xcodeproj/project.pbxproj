@@ -20,6 +20,7 @@
 		AC9F665323A240B6005FFD21 /* TitleText.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9F664F23A240B6005FFD21 /* TitleText.swift */; };
 		AC9F665723A24796005FFD21 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9F665623A24796005FFD21 /* Color.swift */; };
 		AC9F665923A25810005FFD21 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9F665823A25810005FFD21 /* CustomTextField.swift */; };
+		ACC8ABD223A5B6BE0078F337 /* KeyboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC8ABD123A5B6BE0078F337 /* KeyboardManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		AC9F664F23A240B6005FFD21 /* TitleText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleText.swift; sourceTree = "<group>"; };
 		AC9F665623A24796005FFD21 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		AC9F665823A25810005FFD21 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		ACC8ABD123A5B6BE0078F337 /* KeyboardManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 		AC9F662823A24091005FFD21 /* LightDarkViewer */ = {
 			isa = PBXGroup;
 			children = (
+				ACC8ABD023A5B6A40078F337 /* Helper */,
 				AC9F662923A24091005FFD21 /* AppDelegate.swift */,
 				AC9F662F23A24094005FFD21 /* Assets.xcassets */,
 				AC9F662D23A24091005FFD21 /* ContentView.swift */,
@@ -139,6 +142,14 @@
 				AC9F665623A24796005FFD21 /* Color.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		ACC8ABD023A5B6A40078F337 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				ACC8ABD123A5B6BE0078F337 /* KeyboardManager.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,6 +255,7 @@
 			files = (
 				AC9F662A23A24091005FFD21 /* AppDelegate.swift in Sources */,
 				AC9F662C23A24091005FFD21 /* SceneDelegate.swift in Sources */,
+				ACC8ABD223A5B6BE0078F337 /* KeyboardManager.swift in Sources */,
 				AC9F665323A240B6005FFD21 /* TitleText.swift in Sources */,
 				AC9F665223A240B6005FFD21 /* SubTitleText.swift in Sources */,
 				AC9F662E23A24091005FFD21 /* ContentView.swift in Sources */,

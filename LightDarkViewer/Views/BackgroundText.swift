@@ -30,7 +30,7 @@ extension BackgroundText: View {
 			.background(backColor)
 			.foregroundColor(textColor)
 	}
-
+	
 }
 
 

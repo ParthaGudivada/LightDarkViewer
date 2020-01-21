@@ -27,6 +27,7 @@ extension CustomTextField: View {
 		ZStack(alignment: .leading) {
 			if textData.isEmpty {
 				Text(placeHolder)
+					.italic()
 					.foregroundColor(placeHolderTextColor)
 					.opacity(0.5)
 			}
